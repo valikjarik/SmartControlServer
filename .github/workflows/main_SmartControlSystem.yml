@@ -20,9 +20,12 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '3.1.301'
-
+    
+    - name: To Project folder
+      run: cd SmartControlServer
+      
     - name: Build with dotnet
-      run: dotnet build ${{env.DOTNET_ROOT}}/myapp --configuration Release
+      run: dotnet build --configuration Release
 
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
