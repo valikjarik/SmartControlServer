@@ -20,15 +20,12 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '3.1.301'
-    
-    - name: Show folders
-      run: ls
       
     - name: Build with dotnet
       run: dotnet build SmartControlServer/SmartControlServer.sln --configuration Release
  
     - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      run: dotnet publish SmartControlServer/SmartControlServer.sln -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
