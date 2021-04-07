@@ -21,12 +21,12 @@ jobs:
       with:
         dotnet-version: '3.1.301'
     
-    - name: To Project folder
+    - name: Show folders
       run: ls
       
     - name: Build with dotnet
-      run: dotnet build --configuration Release
-
+      run: dotnet build SmartControlServer/SmartControlServer.sln --configuration Release
+ 
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
