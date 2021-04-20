@@ -4705,32 +4705,36 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Valentin\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\WestS\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Valentin\\Desktop\\SmartControlServer\\SmartControlServer\\SmartControlServer\\SmartControlServer.csproj",
+      "projectUniqueName": "C:\\Users\\WestS\\source\\repos\\SmartControlServer\\SmartControlServer\\SmartControlServer.csproj",
       "projectName": "SmartControlServer",
-      "projectPath": "C:\\Users\\Valentin\\Desktop\\SmartControlServer\\SmartControlServer\\SmartControlServer\\SmartControlServer.csproj",
-      "packagesPath": "C:\\Users\\Valentin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Valentin\\Desktop\\SmartControlServer\\SmartControlServer\\SmartControlServer\\obj\\",
+      "projectPath": "C:\\Users\\WestS\\source\\repos\\SmartControlServer\\SmartControlServer\\SmartControlServer.csproj",
+      "packagesPath": "C:\\Users\\WestS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\WestS\\source\\repos\\SmartControlServer\\SmartControlServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Valentin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\WestS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -4742,6 +4746,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Telegram.Bot": {
             "target": "Package",
@@ -4766,7 +4771,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

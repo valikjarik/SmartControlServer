@@ -19,18 +19,21 @@ namespace SmartControlServer.Models.TelegramBot
             {
                 return client;
             }
-            commandsList = new List<Command>();
-            commandsList.Add(new HelloCommand());
-            commandsList.Add(new GetSensorsCommand());
-            commandsList.Add(new GetStateCommand());
-            commandsList.Add(new SetStateCommand());
-            commandsList.Add(new GetRulesCommand());
-            commandsList.Add(new GetRuleStateCommand());
-            commandsList.Add(new AddRuleCommand());
-            commandsList.Add(new AddSensorToRuleCommand());
-            commandsList.Add(new AddSensorCommand());
-            commandsList.Add(new DeleteSensorFromRuleCommand());
-            commandsList.Add(new DeleteSensorCommand());
+
+            commandsList = new List<Command>
+            {
+                new HelloCommand(),
+                new GetSensorsCommand(),
+                new GetStateCommand(),
+                new SetStateCommand(),
+                new GetRulesCommand(),
+                new GetRuleStateCommand(),
+                new AddRuleCommand(),
+                new AddSensorToRuleCommand(),
+                new AddSensorCommand(),
+                new DeleteSensorFromRuleCommand(),
+                new DeleteSensorCommand()
+            };
 
             client = new TelegramBotClient(AppSettings.Key);
 

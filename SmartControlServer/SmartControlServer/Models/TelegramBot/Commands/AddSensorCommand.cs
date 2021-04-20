@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +16,7 @@ namespace SmartControlServer.Models.TelegramBot.Commands
         {
             var chatId = message.Chat.Id;
             var messageId = message.MessageId;
-            var id = new string(message.Text.Except("/addSensor ").ToArray());
+            var id = message.Text.Split(' ')[1];
 
             if (string.IsNullOrEmpty(id))
             {
