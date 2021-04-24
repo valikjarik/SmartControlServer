@@ -1,8 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+
+using SmartControlServer.Models;
+
+using System;
 
 namespace SmartControlServer
 {
@@ -28,6 +33,26 @@ namespace SmartControlServer
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.Use(async (context, next) =>
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write($"\n{context.Request.Method} : {context.Request.Path}");
+
+                string token = context.Request.Headers["Token"];
+                if (token is null || AppSettings.Token != token)
+                {
+                    context.Response.StatusCode = 403;
+                    await context.Response.WriteAsync("Access denied !");
+                    Console.Write($" => {context.Response.StatusCode}");
+                    Console.ResetColor();
+                    return;
+                }
+
+                await next.Invoke();
+                Console.Write($" => {context.Response.StatusCode}");
+                Console.ResetColor();
+            });
 
             app.UseRouting();
 

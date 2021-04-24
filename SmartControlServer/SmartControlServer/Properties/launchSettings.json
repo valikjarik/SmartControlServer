@@ -19,6 +19,7 @@
     },
     "SmartControlServer": {
       "commandName": "Project",
+      "commandLineArgs": "qwertyuiop",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
       "environmentVariables": {
